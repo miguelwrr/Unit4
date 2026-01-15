@@ -57,7 +57,7 @@ public class Article {
 	//Value checkers
 	
 	static void checkName(String name) {
-		if(name.trim().equals("")) {
+		if(name == null || name.trim().equals("")) {
 			throw new IllegalArgumentException("Item must have a name.");
 		}
 	}

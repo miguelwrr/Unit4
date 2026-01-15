@@ -13,6 +13,6 @@ public class MainProduct {
 	}
 
 	static void printProduct(Product p) {
-		System.out.printf("%s - Price: %.2f- TAX:%d%%, MPRT:%.2f\n", p.getName(), p.getPrice(), p.TAX, p.getTaxedPrice());
+		System.out.printf("%s - Price: %.2f- TAX:%d%%, MPRT:%.2f\n", p.getName(), p.getPrice(), p.getTax(), p.getRetailPrice());
 	}
 }

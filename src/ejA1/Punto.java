@@ -9,28 +9,48 @@ public class Punto {
 		this.x = x;
 		this.y = y;
 	}
-	void setX(int x) {
+	
+	Punto(int coord){
+		this(coord, coord);
+	}
+	
+	
+	public void setX(int x) {
 		this.x = x;
 	}
-	void setY(int y) {
+	public void setY(int y) {
 		this.y = y;
 	}
-	void setCoords(int x, int y) {
-		this.setX(x);
-		this.setY(y);
+	public void setXY(int x, int y) {
+		setX(x);
+		setY(y);
 	}
-	void setCoords(int coords) {
-		this.setX(coords);
-		this.setY(coords);
+	public void setXY(int coords) {
+		setXY(coords, coords);
 	}
-	int getX() {
-		return this.x;
+	public int getX() {
+		return x;
 	}
-	int getY() {
-		return this.y;
+	public int getY() {
+		return y;
 	}
-	int[] getCoords() {
-		int[] coords = {this.x, this.y};
+	public int[] getXY() {
+		int[] coords = {x, y};
 		return coords;
+	}
+	
+	public void desplaza(int dx, int dy) {
+		x += dx;
+		y += dy;
+	}
+	
+	public double distancia(Punto p) {
+		int dx = Math.abs(p.getX() - x);
+		int dy = Math.abs(p.getY() - y);
+		return Math.sqrt((double) dx*dx + (double) dy*dy);
+	}
+	
+	public String toString() {
+		return String.format("(%d, %d)", x, y);
 	}
 }

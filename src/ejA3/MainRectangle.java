@@ -4,13 +4,13 @@ public class MainRectangle {
 
 	public static void main(String[] args) {
 		Rectangle rec1 = new Rectangle(0, 5);
-		Rectangle rec2 = new Rectangle(7, 9, 2, 3);
+		Rectangle rec2 = new Rectangle(7, 9, 10, 10);
 		
 		printData(rec1, rec2);
 		System.out.println();
 		
 		rec1.setCoords(9, -2, -1, 10);
-		rec2.setCoords(91, 7);
+		rec2.setCoords(91, 190);
 		
 		printData(rec1, rec2);
 		
@@ -32,5 +32,7 @@ public class MainRectangle {
 		System.out.println("\nRectangle 2:");
 		printData(rec2);
 	}
+	
+	
 
 }
